@@ -129,3 +129,83 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Left for you:** exact fixture values, names, wording, the implementation and the tradeoff decision. Do not open the hints until you have an example and a first attempt.
 
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
+
+<!-- expanded-story-clinics -->
+
+## Additional planning checkpoints for stories 01–06
+
+[Nine more stories, 07–15](11-NINE-MORE-STORIES.md) · [Expanded workshop map](WORKBOOK-INDEX.md)
+
+Keep the original plans above. The following checkpoints add implementation and review depth without completing the exercise for you.
+
+### Story 01 planning clinic: Add a clear-one-answer action
+
+**Before editing:** restate the boundary in your own words: Delete one answer key and rerender its radio group without touching other answers. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “The chosen question becomes skipped after scoring and others retain their choices.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
+
+### Story 02 planning clinic: Show unanswered question IDs
+
+**Before editing:** restate the boundary in your own words: Derive a summary from skipped result rows with links to corresponding fieldsets. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “The summary changes correctly after answering or clearing one question.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
+
+### Story 03 planning clinic: Add a sixth question
+
+**Before editing:** restate the boundary in your own words: Choose a new stable ID, two choices and an explanation; keep the scoring function unchanged. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “Partial and all-correct totals use the new denominator without hard-coded five in logic.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
+
+### Story 04 planning clinic: Shuffle with a supplied order
+
+**Before editing:** restate the boundary in your own words: Accept an explicit permutation fixture for reproducible practice instead of uncontrolled random tests. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “Scoring per ID remains identical across the original and supplied order.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
+
+### Story 05 planning clinic: Show chosen and correct text
+
+**Before editing:** restate the boundary in your own words: Extend result rows with safe explanatory choice text while retaining a distinct skipped state. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “Skipped rows do not pretend a choice was made and reordered questions show their own explanations.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
+
+### Story 06 planning clinic: Add reset quiz
+
+**Before editing:** restate the boundary in your own words: Clear the answer map and restore the original order through an explicit action. Identify the part of `public/core.js` or `public/app.js` that owns it. If your proposed design changes another owner, explain the dependency instead of opening every file for a broad rewrite.
+
+**Acceptance matrix:** write ordinary, boundary and repeat/recovery rows that establish “After reset no radios are checked and a fresh score reports every question skipped.” Include exact starting data or content and the expected retained information. Calculate expected values or inspect meaningful source order independently of the proposed implementation.
+
+**First implementation slice:** make only enough of the change to demonstrate one acceptance row. Inspect the diff and predict the next row before running it. If your first slice is mostly setup or abstraction with no observable result, consider a smaller direct route.
+
+**Review challenge:** sketch a plausible wrong solution that would pass a casual demonstration. Choose a counterexample that exposes its specific weakness. Ask an assistant to critique that example rather than immediately asking it to finish the entire feature.
+
+**Evidence and explanation:** use npm test, plus the relevant real interaction or CLI observation. Record the actual observation and the limit of the check. Finish by naming a design decision you made yourself and explaining why the neighboring original behavior still holds.
