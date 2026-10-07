@@ -6,9 +6,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Add a clear-one-answer action
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Delete one answer key and rerender its radio group without touching other answers.
+**Hint 1 — ownership:** Begin from the `answers` map and `renderQuestions` in `public/app.js`. Delete one answer key and rerender its radio group without touching other answers.
 
-**Hint 2 — reasoning:** Revisit the decision “Use identity instead of position”. Ask yourself: Which fixture would accidentally pass even if you used index keys everywhere?
+**Hint 2 — reasoning:** Revisit the decision “Represent no answer distinctly”. Ask yourself: Why does if (!choice) break the first option?
 
 **Answer direction:** A defensible solution demonstrates this observable result: The chosen question becomes skipped after scoring and others retain their choices. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -16,7 +16,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Show unanswered question IDs
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Derive a summary from skipped result rows with links to corresponding fieldsets.
+**Hint 1 — ownership:** Begin from the `skipped` rows returned by `scoreQuiz`. Derive a summary from skipped result rows with links to corresponding fieldsets.
 
 **Hint 2 — reasoning:** Revisit the decision “Derive totals from result rows”. Ask yourself: What happens to a manually incremented score when a learner changes correct to incorrect?
 
@@ -26,9 +26,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Add a sixth question
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Choose a new stable ID, two choices and an explanation; keep the scoring function unchanged.
+**Hint 1 — ownership:** Begin from the `questions` array in `public/core.js`. Choose a new stable ID, two choices and an explanation; keep the scoring function unchanged.
 
-**Hint 2 — reasoning:** Revisit the decision “Represent no answer distinctly”. Ask yourself: Why does if (!choice) break the first option?
+**Hint 2 — reasoning:** Revisit the decision “Use identity instead of position”. Ask yourself: Which fixture would accidentally pass even if you used index keys everywhere?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Partial and all-correct totals use the new denominator without hard-coded five in logic. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -36,7 +36,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Shuffle with a supplied order
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Accept an explicit permutation fixture for reproducible practice instead of uncontrolled random tests.
+**Hint 1 — ownership:** Begin from the `order` array in `public/app.js`. Accept an explicit permutation fixture for reproducible practice instead of uncontrolled random tests.
 
 **Hint 2 — reasoning:** Revisit the decision “Use identity instead of position”. Ask yourself: Which fixture would accidentally pass even if you used index keys everywhere?
 
@@ -46,9 +46,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Show chosen and correct text
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Extend result rows with safe explanatory choice text while retaining a distinct skipped state.
+**Hint 1 — ownership:** Begin from the row objects built in `scoreQuiz`. Extend result rows with safe explanatory choice text while retaining a distinct skipped state.
 
-**Hint 2 — reasoning:** Revisit the decision “Derive totals from result rows”. Ask yourself: What happens to a manually incremented score when a learner changes correct to incorrect?
+**Hint 2 — reasoning:** Revisit the decision “Represent no answer distinctly”. Ask yourself: Why does if (!choice) break the first option?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Skipped rows do not pretend a choice was made and reordered questions show their own explanations. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -56,7 +56,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Add reset quiz
 
-**Hint 1 — ownership:** Begin from `scoreQuiz`. Clear the answer map and restore the original order through an explicit action.
+**Hint 1 — ownership:** Begin from the `answers` map and `order` array in `public/app.js`. Clear the answer map and restore the original order through an explicit action.
 
 **Hint 2 — reasoning:** Revisit the decision “Represent no answer distinctly”. Ask yourself: Why does if (!choice) break the first option?
 

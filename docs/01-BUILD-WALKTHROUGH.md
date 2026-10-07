@@ -20,19 +20,19 @@ For each fixture, identify id, text, options, correct and why. The correct field
 
 Check the first option for identity and follow its onchange handler. The value stored is numeric zero under identity. Explain why rendering a reversed list can still check the right radio: the renderer consults the same ID rather than replaying positional clicks.
 
-**Pause and produce evidence:** identity=0 and skip=1, then reverse. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Change an answer after scoring. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Score partial work
 
 Submit two answers and leave three untouched. scoreQuiz creates five rows, including skips. Count correct and skipped from those rows and verify the displayed denominator remains five. A skipped question is not automatically a failure of the app or an invitation to invent an answer.
 
-**Pause and produce evidence:** Change an answer after scoring. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** identity=0 and skip=1, then reverse. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 4: Test a permutation
 
 Reverse the questions and compare results by ID. The row order changes because display order changed, but a particular question's status and explanation stay attached to it. This is a focused example of a metamorphic check: change a representation detail that should not change the underlying meaning.
 
-**Pause and produce evidence:** Change an answer after scoring. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** identity=0 and skip=1, then reverse. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Keep the implementation reviewable
 

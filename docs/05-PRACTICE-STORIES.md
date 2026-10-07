@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Add a clear-one-answer action
 
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Delete one answer key and rerender its radio group without touching other answers.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Show unanswered question IDs
-
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Derive a summary from skipped result rows with links to corresponding fieldsets.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Add a sixth question
 
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Choose a new stable ID, two choices and an explanation; keep the scoring function unchanged.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Shuffle with a supplied order
-
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Accept an explicit permutation fixture for reproducible practice instead of uncontrolled random tests.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Show chosen and correct text
 
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Extend result rows with safe explanatory choice text while retaining a distinct skipped state.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Add reset quiz
-
-**User need:** As a learner or user of Quiz Result Explainer, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Clear the answer map and restore the original order through an explicit action.
 
